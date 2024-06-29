@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tmG0PywvhvMqzxaRNCoY/PQDrVJDANrtkOHf7zbzVPoWvTpjS7wvyedvJpJD/tlEu+larxKVVhSr811Cxz2maw==",
+  "dgSpecHash": "jNq7Ke/Jxizk0I9ENXEDo7BR/2hbX4DvqBebm2xVZEAAcAQwaYdiTXPLWZ0gXaOnqRxQ0Ky5bJ2Gb0EM9lJNMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Geeêh Luis\\Desktop\\Vianna_Junior\\PWA\\Trabalho\\Carros\\Carros\\Carros.csproj",
+  "projectFilePath": "C:\\Users\\Geeêh Luis\\Desktop\\Projetos Pessoais\\Carros\\Carros\\Carros\\Carros.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Geeêh Luis\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Geeêh Luis\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",

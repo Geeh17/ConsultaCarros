@@ -196,13 +196,13 @@
       "mscorlib.dll": "sha256-er6cLjOyu1s02HPaReJi0KkBwOSQyQ0\/T8lVwYrQmwE=",
       "netstandard.dll": "sha256-UjAkjmlOWOKd1d6UaAYFH6rO8pqwuoCKrs8+TW10Xvk=",
       "System.Private.CoreLib.dll": "sha256-uAJxx8FtA3E57cEa87ZsxFWqQmHkAYyH5WNbmii0koQ=",
-      "CarrosClient.dll": "sha256-je3NdRrWFfZTdJBMw2yinjeVzxhoDpyXUrmaYZrSKjI="
+      "CarrosClient.dll": "sha256-745NFYaLQOJMwMpumLJ620FOR3RKE4HjeuzpHF1I124="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "CarrosClient.pdb": "sha256-FVucvqGE4WLOpSwuzWpkg3DAPNMNIzXWvwwl9mELwv0="
+      "CarrosClient.pdb": "sha256-A4oRHl07bliZRUZEx8y6W+SAarY8w4P0NldZyXrBfy8="
     },
     "runtime": {
       "dotnet.6.0.31.32n5ctb5gw.js": "sha256-k3r5KPTTMlxe9KmBUGXolEPkii6jv\/+oC1SOmed3LVc=",

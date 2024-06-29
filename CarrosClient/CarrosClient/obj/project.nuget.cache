@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XOH9raZx2s9xcgYj5TBsFkRhbQUrGgaMOtVGJsErMF/8A2BVgj3B8QNJUnrBV5rsQ2SECFnsCsAdOAPzcx55aQ==",
+  "dgSpecHash": "z7YMPklL0VX6f5x//VIdL25Z9Jy6i8M/f2duTgey3VzH3kCKqk9O0A0TV2hZbNmhYXcsybZKgisTv9Sn4ndZCg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Geeêh Luis\\Desktop\\Vianna_Junior\\PWA\\Trabalho\\CarrosClient\\CarrosClient\\CarrosClient.csproj",
+  "projectFilePath": "C:\\Users\\Geeêh Luis\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Geeêh Luis\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.31\\microsoft.aspnetcore.authorization.6.0.31.nupkg.sha512",
     "C:\\Users\\Geeêh Luis\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.31\\microsoft.aspnetcore.components.6.0.31.nupkg.sha512",
