@@ -17,15 +17,28 @@
         <label for="preco">Preço:</label>
         <InputNumber id="preco" class="form-control" @bind-Value="novoCarro.Preco" />
     </div>
+    @if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+        <div class="alert alert-danger">@ErrorMessage</div>
+    }
     <button type="submit" class="btn btn-primary">Cadastrar</button>
 </EditForm>
 
 @code {
     private Carro novoCarro = new Carro();
+    private string ErrorMessage;
 
     private async Task HandleValidSubmit()
     {
-        await CarroService.CreateCarro(novoCarro);
-        NavigationManager.NavigateTo("/carros");
+        if (novoCarro.Preco < 0)
+        {
+            ErrorMessage = "Por favor, informe apenas números positivos para o preço.";
+        }
+        else
+        {
+            ErrorMessage = string.Empty;
+            await CarroService.CreateCarro(novoCarro);
+            NavigationManager.NavigateTo("/carros");
+        }
     }
 }
