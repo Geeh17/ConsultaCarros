@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "Carros.Controllers.CarroController",
+    "Method": "GetAllCarros",
+    "RelativePath": "api/Carro",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Carros.Controllers.CarroController",
+    "Method": "CreateCarro",
+    "RelativePath": "api/Carro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carro",
+        "Type": "Carros.Models.Carro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Carros.Controllers.CarroController",
+    "Method": "UpdateCarro",
+    "RelativePath": "api/Carro",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carro",
+        "Type": "Carros.Models.Carro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Carros.Controllers.CarroController",
+    "Method": "GetCarroById",
+    "RelativePath": "api/Carro/{carroId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carroId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Carros.Controllers.CarroController",
+    "Method": "DeleteCarro",
+    "RelativePath": "api/Carro/{carroId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carroId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

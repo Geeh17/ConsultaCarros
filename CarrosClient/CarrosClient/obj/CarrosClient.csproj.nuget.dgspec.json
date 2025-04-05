@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Geeêh Luis\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj": {}
+    "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Geeêh Luis\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj": {
+    "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geeêh Luis\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj",
+        "projectUniqueName": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj",
         "projectName": "CarrosClient",
-        "projectPath": "C:\\Users\\Geeêh Luis\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj",
-        "packagesPath": "C:\\Users\\Geeêh Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geeêh Luis\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\obj\\",
+        "projectPath": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\CarrosClient.csproj",
+        "packagesPath": "C:\\Users\\Geraldo Luiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Geeêh Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Geraldo Luiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,6 +58,24 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.31, )"
+            },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23401.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23401.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.14, )",
+              "autoReferenced": true
             }
           },
           "imports": [
@@ -69,7 +92,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.31, 6.0.31]"
+              "version": "[6.0.36, 6.0.36]"
             }
           ],
           "frameworkReferences": {
@@ -77,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.423\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

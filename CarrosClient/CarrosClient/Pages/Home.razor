@@ -1,5 +1,6 @@
 @page "/"
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -7,28 +8,78 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        overflow: hidden; 
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+        color: #ffffff;
     }
 
-    .container-fluid {
+    .hero-section {
         height: 100vh;
+        width: 100vw;
+        background: url('images/home.jpg') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
     }
 
-    .hero-image {
-        max-width: 100%;
-        height: auto;
-        margin: 20px 0;
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-primary {
+        padding: 10px 25px;
+        font-weight: 600;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+        color: #e0e0e0;
+        font-size: 0.9rem;
+        z-index: 2;
     }
 </style>
 
-<div class="container-fluid d-flex flex-column justify-content-center align-items-center">
-    <div class="text-center">
-        <h1 class="display-4">Bem-vindo ao CarrosClient!</h1>
-        <p class="lead">Gerencie seus carros de forma fácil e rápida.</p>
-        <hr class="my-4">
-        <p class="lead">Este é um sistema simples para gerenciar informações sobre veículos.</p>
-        <div>
-            <img src="images/home.jpg" alt="Imagem Inicial" class="img-fluid hero-image">
-        </div>
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Bem-vindo ao CarrosClient!</h1>
+        <p class="hero-subtitle">Gerencie seus carros de forma fácil, rápida e eficiente.</p>
+
+        <a href="/create" class="btn btn-primary">Cadastrar Novo Carro</a>
     </div>
+
+    <footer>
+        &copy; @DateTime.Now.Year - CarrosClient. Todos os direitos reservados.
+    </footer>
 </div>
