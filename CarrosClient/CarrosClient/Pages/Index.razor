@@ -1,51 +1,81 @@
 ﻿@page "/carros"
 @inject ICarroService CarroService
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JS
 
 <PageTitle>Carros</PageTitle>
 
 <div class="container mt-5">
-    <h3 class="mb-4">Lista de Carros</h3>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h3 class="mb-4">Lista de Carros</h3>
 
-    @if (carros == null)
-    {
-        <p><em>Carregando...</em></p>
-    }
-    else
-    {
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Modelo</th>
-                        <th>Preço</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var carro in carros)
-                    {
-                        <tr>
-                            <td>@carro.Modelo</td>
-                            <td>@carro.Preco.ToString("C")</td>
-                            <td>
-                                <button class="btn btn-primary btn-sm mr-2" @onclick="() => EditarCarro(carro.Id)">Editar</button>
-                                <button class="btn btn-danger btn-sm" @onclick="() => DeletarCarro(carro.Id)">Deletar</button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+            @if (loading)
+            {
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                </div>
+            }
+            else if (carros is null || !carros.Any())
+            {
+                <div class="alert alert-info">Nenhum carro cadastrado.</div>
+            }
+            else
+            {
+                @if (!string.IsNullOrEmpty(mensagemSucesso))
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @mensagemSucesso
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Preço</th>
+                                <th style="width: 160px;">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var carro in carros)
+                            {
+                                <tr>
+                                    <td>@carro.Modelo</td>
+                                    <td>@carro.Preco.ToString("C")</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary me-2" @onclick="() => EditarCarro(carro.Id)">Editar</button>
+                                        <button class="btn btn-sm btn-danger" @onclick="() => ConfirmarDelecao(carro.Id)">Deletar</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
         </div>
-    }
+    </div>
 </div>
 
 @code {
     private IEnumerable<Carro> carros;
+    private bool loading = true;
+    private string? mensagemSucesso;
 
     protected override async Task OnInitializedAsync()
     {
+        await CarregarCarros();
+    }
+
+    private async Task CarregarCarros()
+    {
+        loading = true;
         carros = await CarroService.GetAllCarros();
+        loading = false;
     }
 
     private void EditarCarro(int id)
@@ -53,8 +83,14 @@
         NavigationManager.NavigateTo($"/edit/{id}");
     }
 
-    private async Task DeletarCarro(int id)
+    private async Task ConfirmarDelecao(int id)
     {
-        carros = await CarroService.DeleteCarro(id);
+        var confirmar = await JS.InvokeAsync<bool>("confirm", "Tem certeza que deseja deletar este carro?");
+        if (confirmar)
+        {
+            await CarroService.DeleteCarro(id);
+            mensagemSucesso = "Carro deletado com sucesso!";
+            await CarregarCarros();
+        }
     }
 }

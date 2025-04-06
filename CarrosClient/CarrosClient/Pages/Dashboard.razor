@@ -2,27 +2,78 @@
 @inject ICarroService CarroService
 @inject IJSRuntime JSRuntime
 
-<h1>Painel</h1>
-<p>Visualize o painel de controle dos seus carros.</p>
-
-<canvas id="carrosChart" width="400" height="200"></canvas>
+<h1 class="mb-4 text-center">Painel de Controle</h1>
 
 @if (carros == null)
 {
-    <p><em>Carregando...</em></p>
+    <div class="text-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Carregando...</span>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container mb-5">
+        <div class="row justify-content-center g-4">
+            <div class="col-md-3">
+                <div class="card text-white bg-primary shadow rounded-3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Total de Carros</h5>
+                        <p class="card-text display-6">@carros.Count()</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-white bg-success shadow rounded-3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Preço Médio</h5>
+                        <p class="card-text display-6">@carros.Average(c => c.Preco).ToString("C")</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-white bg-warning shadow rounded-3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Mais Barato</h5>
+                        <p class="card-text ">@carros.MinBy(c => c.Preco)?.Modelo - @carros.Min(c => c.Preco).ToString("C")</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-white bg-danger shadow rounded-3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Mais Caro</h5>
+                        <p class="card-text">@carros.MaxBy(c => c.Preco)?.Modelo - @carros.Max(c => c.Preco).ToString("C")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="carrosChart" width="400" height="200"></canvas>
 }
 
 @code {
-    private IEnumerable<Carro> carros;
+    private IEnumerable<Carro>? carros;
+    private bool graficoRenderizado = false;
 
     protected override async Task OnInitializedAsync()
     {
         carros = await CarroService.GetAllCarros();
-        if (carros != null)
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && carros != null && carros.Any() && !graficoRenderizado)
         {
             var modelos = carros.Select(c => c.Modelo).ToArray();
             var precos = carros.Select(c => c.Preco).ToArray();
             await JSRuntime.InvokeVoidAsync("drawChart", modelos, precos);
+            graficoRenderizado = true;
         }
     }
 }

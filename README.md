@@ -1,143 +1,100 @@
+# 🚗 DriveControl
 
-# CarrosClient
-Este projeto é uma aplicação completa para o gerenciamento de carros, incluindo um back-end desenvolvido em .NET e um front-end utilizando Blazor.
+**DriveControl** é um sistema completo para o gerenciamento de veículos, com API RESTful em ASP.NET Core e front-end moderno usando Blazor WebAssembly.
 
+---
 
+## 🧩 Estrutura do Projeto
 
-# Documentação da API
+- **Back-End:** ASP.NET Core Web API + Dapper + SQL Server
+- **Front-End:** Blazor WebAssembly + Bootstrap + Chart.js
 
-## Endpoints
+---
+
+## 🚀 Como Executar o Projeto
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/Geeh17/ConsultaCarros
+cd DriveControl
+```
+
+---
+
+### 2. Configurar o Banco de Dados
+
+- Crie o banco:
+
+```sql
+CREATE DATABASE DriveControlDB;
+GO
+
+USE DriveControlDB;
+GO
+
+CREATE TABLE [dbo].[Carros] (
+    [Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    [Modelo] VARCHAR(100) NOT NULL,
+    [Preco] DECIMAL(18, 2) NOT NULL
+);
+```
+
+- Configure a **string de conexão** no `appsettings.json`:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost;Database=DriveControlDB;Trusted_Connection=True;"
+}
+```
+
+---
+
+### 3. Rodar o Back-End
+
+```bash
+cd Carros/Carros
+dotnet restore
+dotnet run
+```
+
+A API estará disponível em: `https://localhost:7192`
+
+---
+
+### 4. Rodar o Front-End
+
+```bash
+cd ../../CarrosClient/CarrosClient
+dotnet restore
+dotnet run
+```
+
+O app Blazor estará em: `https://localhost:5001`
+
+---
+
+## 📘 Documentação da API
 
 ### `GET /api/carros`
 
-Retorna uma lista de todos os carros.
-
-- **URL**: `/api/carros`
-- **Método HTTP**: `GET`
-- **Resposta de Sucesso**:
-  - **Código**: `200 OK`
-  - **Conteúdo**:
-    ```json
-    [
-      {
-        "id": 1,
-        "marca": "Toyota",
-        "modelo": "Corolla",
-        "ano": 2020
-      },
-      ...
-    ]
-    ```
-
-### `GET /api/carros/{id}`
-
-Retorna as informações de um carro específico.
-
-- **URL**: `/api/carros/{id}`
-- **Método HTTP**: `GET`
-- **Parâmetros de URL**:
-  - `id`: ID do carro.
-- **Resposta de Sucesso**:
-  - **Código**: `200 OK`
-  - **Conteúdo**:
-    ```json
-    {
-      "id": 1,
-      "marca": "Toyota",
-      "modelo": "Corolla",
-      "ano": 2020
-    }
-    ```
-- **Resposta de Erro**:
-  - **Código**: `404 Not Found`
-  - **Conteúdo**: `{ "error": "Carro não encontrado" }`
-
-### `POST /api/carros`
-
-Cria um novo carro.
-
-- **URL**: `/api/carros`
-- **Método HTTP**: `POST`
-- **Corpo da Requisição**:
-  ```json
-  {
-    "marca": "Toyota",
-    "modelo": "Corolla",
-    "ano": 2020
-  }
-  ```
-- **Resposta de Sucesso**:
-  - **Código**: `201 Created`
-  - **Conteúdo**:
-    ```json
-    {
-      "id": 1,
-      "marca": "Toyota",
-      "modelo": "Corolla",
-      "ano": 2020
-    }
-    ```
-
-### `PUT /api/carros/{id}`
-
-Atualiza as informações de um carro específico.
-
-- **URL**: `/api/carros/{id}`
-- **Método HTTP**: `PUT`
-- **Parâmetros de URL**:
-  - `id`: ID do carro.
-- **Corpo da Requisição**:
-  ```json
-  {
-    "marca": "Toyota",
-    "modelo": "Corolla",
-    "ano": 2021
-  }
-  ```
-- **Resposta de Sucesso**:
-  - **Código**: `200 OK`
-  - **Conteúdo**:
-    ```json
-    {
-      "id": 1,
-      "marca": "Toyota",
-      "modelo": "Corolla",
-      "ano": 2021
-    }
-    ```
-- **Resposta de Erro**:
-  - **Código**: `404 Not Found`
-  - **Conteúdo**: `{ "error": "Carro não encontrado" }`
-
-### `DELETE /api/carros/{id}`
-
-Remove um carro específico.
-
-- **URL**: `/api/carros/{id}`
-- **Método HTTP**: `DELETE`
-- **Parâmetros de URL**:
-  - `id`: ID do carro.
-- **Resposta de Sucesso**:
-  - **Código**: `204 No Content`
-- **Resposta de Erro**:
-  - **Código**: `404 Not Found`
-  - **Conteúdo**: `{ "error": "Carro não encontrado" }`
-
-## Exemplo de Requisição com cURL
-
-### Listar todos os carros
+Retorna todos os carros cadastrados.
 
 ```bash
 curl -X GET "https://localhost:5001/api/carros"
 ```
 
-### Obter um carro específico
+### `GET /api/carros/{id}`
+
+Busca um carro específico por ID.
 
 ```bash
 curl -X GET "https://localhost:5001/api/carros/1"
 ```
 
-### Criar um novo carro
+### `POST /api/carros`
+
+Cria um novo carro.
 
 ```bash
 curl -X POST "https://localhost:5001/api/carros" -H "Content-Type: application/json" -d '{
@@ -147,7 +104,9 @@ curl -X POST "https://localhost:5001/api/carros" -H "Content-Type: application/j
 }'
 ```
 
-### Atualizar um carro
+### `PUT /api/carros/{id}`
+
+Atualiza um carro existente.
 
 ```bash
 curl -X PUT "https://localhost:5001/api/carros/1" -H "Content-Type: application/json" -d '{
@@ -157,30 +116,45 @@ curl -X PUT "https://localhost:5001/api/carros/1" -H "Content-Type: application/
 }'
 ```
 
-### Remover um carro
+### `DELETE /api/carros/{id}`
+
+Remove um carro do sistema.
 
 ```bash
 curl -X DELETE "https://localhost:5001/api/carros/1"
 ```
 
-## Erros Comuns
+---
 
-- `404 Not Found`: Indica que o recurso solicitado não foi encontrado. Verifique se o ID do carro está correto.
-- `400 Bad Request`: Indica que a requisição possui parâmetros inválidos. Verifique o corpo da requisição e os parâmetros de URL.
+## 📊 Dashboard
 
-## Conclusão
+A dashboard mostra:
 
-Essa documentação cobre os principais endpoints e como utilizá-los. Ajuste conforme necessário para incluir todos os endpoints e detalhes específicos da sua API.
+- Total de carros
+- Preço médio
+- Mais barato / mais caro
+- Gráfico interativo via `Chart.js`
 
-## Documentação
+---
 
-C#  https://learn.microsoft.com/en-us/dotnet/csharp/
+## 📎 Recursos
 
+- Projeto 100% em C# com Dapper (sem EF Core)
+- Blazor com layout moderno e responsivo
+- Integração via `JSInterop` para gráficos
+- Validações, feedbacks visuais e UX melhorado
 
-Blazor  https://learn.microsoft.com/pt-br/aspnet/core/blazor/?view=aspnetcore-8.0
+---
 
+## 📚 Links Úteis
 
-## Autor
+- [Documentação .NET (C#)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+- [Blazor WebAssembly](https://learn.microsoft.com/pt-br/aspnet/core/blazor/?view=aspnetcore-8.0)
 
-- [@Geeh17](https://github.com/Geeh17)
+---
+
+## 👤 Autor
+
+Desenvolvido por [@Geeh17](https://github.com/Geeh17)  
+
 

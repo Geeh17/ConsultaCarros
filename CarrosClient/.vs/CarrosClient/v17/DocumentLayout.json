@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|c:\\users\\geraldo luiz\\desktop\\projetos pessoais\\carros\\carrosclient\\carrosclient\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|solutionrelative:carrosclient\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|c:\\users\\geraldo luiz\\desktop\\projetos pessoais\\carros\\carrosclient\\carrosclient\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|solutionrelative:carrosclient\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|c:\\users\\geraldo luiz\\desktop\\projetos pessoais\\carros\\carrosclient\\carrosclient\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|solutionrelative:carrosclient\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|c:\\users\\geraldo luiz\\desktop\\projetos pessoais\\carros\\carrosclient\\carrosclient\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|solutionrelative:carrosclient\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|c:\\users\\geraldo luiz\\desktop\\projetos pessoais\\carros\\carrosclient\\carrosclient\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|solutionrelative:carrosclient\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|c:\\users\\geraldo luiz\\desktop\\projetos pessoais\\carros\\carrosclient\\carrosclient\\pages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|solutionrelative:carrosclient\\pages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|c:\\users\\geraldo luiz\\desktop\\projetos pessoais\\carros\\carrosclient\\carrosclient\\pages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C6C4E69-3984-4C5D-9793-1E4B6C8265F7}|CarrosClient\\CarrosClient.csproj|solutionrelative:carrosclient\\pages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +51,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Shared\\MainLayout.razor",
-              "RelativeDocumentMoniker": "CarrosClient\\Shared\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Shared\\MainLayout.razor",
-              "RelativeToolTip": "CarrosClient\\Shared\\MainLayout.razor",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAcAAAAKAAAAAAAAAA==",
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Dashboard.razor",
+              "RelativeDocumentMoniker": "CarrosClient\\Pages\\Dashboard.razor",
+              "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Dashboard.razor",
+              "RelativeToolTip": "CarrosClient\\Pages\\Dashboard.razor",
+              "ViewState": "AgIAACEAAAAAAAAAAAAQwCgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-05T20:12:13.602Z",
+              "WhenOpened": "2025-04-06T18:03:40.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "CarrosClient\\Shared\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "CarrosClient\\Shared\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T17:55:27.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\App.razor",
+              "RelativeDocumentMoniker": "CarrosClient\\App.razor",
+              "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\App.razor",
+              "RelativeToolTip": "CarrosClient\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T17:55:08.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "CarrosClient\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Home.razor",
               "RelativeToolTip": "CarrosClient\\Pages\\Home.razor",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAiwFUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAEwAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-05T20:02:37.618Z",
+              "WhenOpened": "2025-04-06T17:52:53.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "CarrosClient\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\wwwroot\\index.html",
+              "RelativeToolTip": "CarrosClient\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-06T17:45:45.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Edit.razor",
+              "RelativeDocumentMoniker": "CarrosClient\\Pages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Edit.razor",
+              "RelativeToolTip": "CarrosClient\\Pages\\Edit.razor",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAQwEgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T17:25:46.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Create.razor",
+              "RelativeDocumentMoniker": "CarrosClient\\Pages\\Create.razor",
+              "ToolTip": "C:\\Users\\Geraldo Luiz\\Desktop\\Projetos Pessoais\\Carros\\CarrosClient\\CarrosClient\\Pages\\Create.razor",
+              "RelativeToolTip": "CarrosClient\\Pages\\Create.razor",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T17:24:19.327Z",
               "EditorCaption": ""
             }
           ]

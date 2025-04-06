@@ -5,37 +5,86 @@
 <PageTitle>Editar Carro</PageTitle>
 
 <div class="container mt-5">
-    <h3 class="mb-4">Editar Carro</h3>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3 class="mb-4">Editar Carro</h3>
 
-    <EditForm Model="carro" OnValidSubmit="HandleValidSubmit">
-        <DataAnnotationsValidator />
-        <ValidationSummary />
+            @if (loading)
+            {
+                    <div class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                    </div>
+            }
+            else
+            {
+                @if (!string.IsNullOrEmpty(MensagemSucesso))
+                {
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @MensagemSucesso
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                }
 
-        <div class="form-group">
-            <label class="form-label">Modelo</label>
-            <InputText class="form-control" @bind-Value="carro.Modelo" />
+                    <EditForm Model="carro" OnValidSubmit="HandleValidSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="mb-3">
+                            <label class="form-label">Modelo</label>
+                            <InputText class="form-control" @bind-Value="carro.Modelo" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Preço</label>
+                            <InputNumber class="form-control" @bind-Value="carro.Preco" />
+                        </div>
+
+                    @if (!string.IsNullOrEmpty(ErrorMessage))
+                    {
+                                <div class="alert alert-danger">@ErrorMessage</div>
+                    }
+
+                        <button type="submit" class="btn btn-primary w-100" disabled="@saving">
+                        @(saving ? "Salvando..." : "Salvar")
+                        </button>
+                    </EditForm>
+            }
         </div>
-        <div class="form-group">
-            <label class="form-label">Preço</label>
-            <InputNumber class="form-control" @bind-Value="carro.Preco" />
-        </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
-    </EditForm>
+    </div>
 </div>
 
 @code {
     [Parameter]
     public int id { get; set; }
-    private Carro carro = new Carro();
+
+    private Carro carro = new();
+    private bool loading = true;
+    private bool saving = false;
+    private string MensagemSucesso;
+    private string ErrorMessage;
 
     protected override async Task OnInitializedAsync()
     {
         carro = await CarroService.GetCarroById(id);
+        loading = false;
     }
 
     private async Task HandleValidSubmit()
     {
+        ErrorMessage = string.Empty;
+        MensagemSucesso = string.Empty;
+
+        if (carro.Preco < 0)
+        {
+            ErrorMessage = "O preço não pode ser negativo.";
+            return;
+        }
+
+        saving = true;
         await CarroService.UpdateCarro(carro);
-        NavigationManager.NavigateTo("/carros");
+        saving = false;
+
+        MensagemSucesso = "Carro atualizado com sucesso!";
     }
 }
