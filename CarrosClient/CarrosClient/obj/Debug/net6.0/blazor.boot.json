@@ -1,7 +1,7 @@
 {
   "entryAssembly": "CarrosClient",
   "resources": {
-    "hash": "sha256-ePHCuR1C1m8wV6lWFfQ53RIUkl33X85wotm9GmVr2Qo=",
+    "hash": "sha256-l4mTgYXMds8RPqjxEIYORjXSggI8TQcmCBwbywsmjUs=",
     "runtime": {
       "dotnet.6.0.36.mfdb5rmmvs.js": "sha256-pu7MO47B6So4jcW6iY2UI11lBZYz2EQnJKiYNsOpNJg=",
       "dotnet.timezones.blat": "sha256-vrFYQt55a4tGoDGoyRfjjGa1nSecx646RK78iTzPWCM=",
@@ -200,10 +200,10 @@
       "mscorlib.dll": "sha256-FHccFgM8rcGOQ8oacA4eEgiiOynHayVKyd2ICq3Bo4w=",
       "netstandard.dll": "sha256-D91viTBgwuzeuIOx1KgBYnoY0hl2IpcBu/zr22Fu0BU=",
       "System.Private.CoreLib.dll": "sha256-5FbWgChEgLPlYByi8VsHTisbCpgMNSbf95JK5dVOs50=",
-      "CarrosClient.dll": "sha256-l1gVENFoGXKBzI/h2Sfi5+SLb6HNj85KknktRMbTXtg="
+      "CarrosClient.dll": "sha256-9zSLu0tz++NFef4i3TbUjix+/9w54lzCBTmPJPgwgeI="
     },
     "pdb": {
-      "CarrosClient.pdb": "sha256-1959NUOe7div7CHd8EmbXTH3ArBPU4Py8IaonULpxvs="
+      "CarrosClient.pdb": "sha256-7NA3iO4DJJDUX5nPDyQmn3cnOO2BEUP2ZmWTp2wPoPE="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

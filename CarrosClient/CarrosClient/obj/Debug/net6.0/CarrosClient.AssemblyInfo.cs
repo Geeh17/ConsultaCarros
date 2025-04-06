@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarrosClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1de53be9e32499a89950acfad28cd2580e54362b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f29f2e382556499a10d451c14f6bf353fff1d4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarrosClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarrosClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
